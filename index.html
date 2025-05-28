@@ -3,76 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Om Vilas Condiments</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff8f0;
-        }
-
-        header {
-            background-color: #8B4513;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8em;
-            margin: 0;
-        }
-
-        .slideshow-container {
-            max-width: 100%;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: none;
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-
-        .info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .info h2 {
-            color: #8B4513;
-        }
-
-        .btn {
-            background-color: #8B4513;
-            border: none;
-            color: white;
-            padding: 12px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-
-        .btn:hover {
-            background-color: #A0522D;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -81,14 +13,14 @@
     </header>
 
     <div class="slideshow-container">
-        <img class="slides" src="C:\Users\Saravanan\Documents\GitHub\Omvilas-Official\Images\Chakkli.jpg" alt="Murukku">
-        <img class="slides" src="C:\Users\Saravanan\Documents\GitHub\Omvilas-Official\Images\Palak.jpg" alt="Palak">
-        <img class="slides" src="C:\Users\Saravanan\Documents\GitHub\Omvilas-Official\Images\garlic.jpg" alt="Garlic">
+        <img class="slides" src="Images/Chakkli.jpg" alt="Murukku">
+        <img class="slides" src="Images/Palak.jpg" alt="Palak">
+        <img class="slides" src="Images/garlic.jpg" alt="Garlic">
     </div>
 
     <div class="info">
         <h2>Authentic Taste of Tradition</h2>
-        <p>Welcome to Om Vilas Condiments! We offer homemade, high-quality South Indian snacks, Made with love and tradition.</p>
+        <p>Welcome to Om Vilas Condiments! We offer homemade, high-quality South Indian snacks, made with love and tradition.</p>
         <a href="#shop" class="btn">Shop Now</a>
     </div>
 
@@ -97,20 +29,6 @@
         <p>Contact: omvilascondiments@gmail.com | +91 83003 44022</p>
     </footer>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex - 1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
