@@ -1,8 +1,9 @@
 body {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background-color: #f0f8ff;
-    margin: 0;
+    padding-top: 80px; /* space for fixed navbar */
 }
+
 
 .carousel-item img {
     height: 450px;
@@ -25,16 +26,16 @@ section h2 {
 }
 
 .brand-title {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .condiments {
-    font-size: 0.6em;
-    text-transform: lowercase;
     text-decoration: underline;
-    margin-left: 5px;
-    vertical-align: middle;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: lowercase;
 }
+
