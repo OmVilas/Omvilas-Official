@@ -1,6 +1,7 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f0f8ff; /* Light blue */
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
 }
 
 .carousel-item img {
@@ -9,5 +10,15 @@ body {
 }
 
 section h2 {
+    font-weight: 700;
     margin-bottom: 10px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
 }
