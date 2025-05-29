@@ -1,5 +1,5 @@
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     background-color: #f0f8ff;
     margin: 0;
 }
@@ -17,8 +17,24 @@ section h2 {
 .nav-link {
     font-weight: 500;
     color: #333 !important;
+    font-size: 1rem;
 }
 
 .nav-link:hover {
     color: #0d6efd !important;
+}
+
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.condiments {
+    font-size: 0.6em;
+    text-transform: lowercase;
+    text-decoration: underline;
+    margin-left: 5px;
+    vertical-align: middle;
 }
