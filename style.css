@@ -3,7 +3,11 @@ body {
     background-color: #f0f8ff;
     padding-top: 80px; /* space for fixed navbar */
 }
-
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
 .carousel-item img {
     height: 450px;
@@ -26,16 +30,14 @@ section h2 {
 }
 
 .brand-title {
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-family: 'DM Sans', sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .condiments {
-    text-decoration: underline;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-transform: lowercase;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  text-decoration: underline;
 }
 
