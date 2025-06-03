@@ -1,7 +1,7 @@
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: #f0f8ff;
-    padding-top: 80px; /* space for fixed navbar */
+   
 }
 .card:hover {
   transform: scale(1.03);
