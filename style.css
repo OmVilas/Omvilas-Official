@@ -112,7 +112,7 @@ section h2 {
 .social-animated {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  Right: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -158,7 +158,7 @@ section h2 {
   content: "";
   position: absolute;
   top: 100%;
-  left: 0;
+  Right: 0;
   width: 100%;
   height: 100%;
   background: #f00;
