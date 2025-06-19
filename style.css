@@ -145,3 +145,65 @@ section h2 {
 .social-icons li a:hover {
     transform: translateY(-5px);
 }
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo .logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    line-height: 1;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: linear-gradient(90deg, white, #d0f0ff);
+    color: #007bff;
+}
+
+/* Search Form */
+.search-form input {
+    width: 180px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-form {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
