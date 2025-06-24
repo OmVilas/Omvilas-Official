@@ -184,25 +184,3 @@ body.active .logo,
 body.active .icon {
     color: #fff;
 }
-.logo-text {
-  font-family: 'Bebas Neue', sans-serif;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.brand-title {
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-  color: #000;
-}
-
-.brand-subtitle {
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.3rem;
-  border-top: 3px solid #000;
-  display: inline-block;
-  padding-top: 0.3rem;
-  color: #000;
-}
