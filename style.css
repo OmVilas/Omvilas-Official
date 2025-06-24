@@ -146,3 +146,19 @@ section h2 {
     transform: translateY(-5px);
 }
 
+h2 {
+  font-weight: 700;
+}
+.card-title {
+  color: #ffb411;
+}
+.navbar .nav-link:hover {
+  color: #ffb411;
+}
+.btn-warning {
+  background-color: #ffb411;
+  border: none;
+}
+.btn-warning:hover {
+  background-color: #ffa400;
+}
