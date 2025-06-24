@@ -184,3 +184,103 @@ body.active .logo,
 body.active .icon {
     color: #fff;
 }
+/* Reset basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --main-color: #ffb411;
+  --text-color: #1e1c2a;
+  --bg-color: #ffffff;
+}
+
+/* Header/Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 10%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo text styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+/* Navbar Menu */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  padding: 10px 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+  color: var(--main-color);
+  background-color: rgba(255, 180, 17, 0.1);
+  border-radius: 8px;
+}
+
+/* Menu Icon for Mobile */
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Dark Mode Icon */
+#darkmode {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+}
