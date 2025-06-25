@@ -11,21 +11,21 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
 // Navbar Toggle for Mobile
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menu = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-// Collapse menu on scroll
 window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
 // Dark Mode Toggle
-let darkmode = document.querySelector('#darkmode');
+const darkmode = document.querySelector('#darkmode');
 
 darkmode.onclick = () => {
     if (darkmode.classList.contains('bx-moon')) {
@@ -37,7 +37,7 @@ darkmode.onclick = () => {
     }
 };
 
-// Scroll Reveal Animation (optional)
+// Scroll Reveal Animation
 ScrollReveal({
     origin: 'top',
     distance: '40px',
@@ -50,26 +50,3 @@ ScrollReveal({
             .contact-box`, {
     interval: 200
 });
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = () => {
-  navbar.classList.toggle('active');
-};
-
-window.onscroll = () => {
-  navbar.classList.remove('active');
-};
-
-// Dark mode toggle
-let darkmode = document.querySelector('#darkmode');
-
-darkmode.onclick = () => {
-  if (darkmode.classList.contains('bx-moon')) {
-    darkmode.classList.replace('bx-moon', 'bx-sun');
-    document.body.classList.add('active');
-  } else {
-    darkmode.classList.replace('bx-sun', 'bx-moon');
-    document.body.classList.remove('active');
-  }
-};
