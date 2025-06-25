@@ -1,236 +1,121 @@
-/* Root and Reset */
-:root {
-  --main-color: #ffb411;
-  --text-color: #1e1c2a;
-  --bg-color: #ffffff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Google Font */
 body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #f0f8ff;
   margin: 0;
   padding: 0;
-  color: var(--text-color);
-}
-
-/* Header/Navbar */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: var(--bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 10%;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* Logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--main-color);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-}
-
-.navbar li a {
-  text-decoration: none;
-  padding: 10px 16px;
-  font-weight: 500;
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-.navbar li a:hover,
-.navbar li a:focus {
-  color: var(--main-color);
-  background-color: rgba(255, 180, 17, 0.1);
-  border-radius: 8px;
-}
-
-/* Menu Icon for Mobile */
-#menu-icon {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-/* Dark Mode Icon */
-#darkmode {
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  header {
-    padding: 16px 5%;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  #menu-icon {
-    display: block;
-  }
-}
-
-/* Buttons */
-.btn-warning {
-  background-color: var(--main-color);
-  border: none;
-}
-
-.btn-warning:hover {
-  background-color: #ffa400;
-}
-
-/* Section Headings */
-h2 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.card-title {
-  color: var(--main-color);
-}
-
-/* Card Hover */
-.card:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Carousel */
-.carousel-item img {
-  height: 450px;
-  object-fit: cover;
-}
-
-/* Social Dock */
-.social-dock {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.social-icons li {
-  list-style: none;
-}
-
-.social-icons li a {
-  width: 45px;
-  height: 45px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 45px;
-  font-size: 18px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #fff;
-  z-index: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.social-icons li a .icon {
-  position: relative;
-  color: #262626;
-  transition: 0.5s;
-  z-index: 3;
-}
-
-.social-icons li a:hover .icon {
-  color: #fff;
-  transform: rotateY(360deg);
-}
-
-.social-icons li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  z-index: 2;
-}
-
-.social-icons li a:hover:before {
-  top: 0;
-}
-
-/* Social Media Colors */
-.social-icons li:nth-child(1) a:before {
-  background: #3b5999; /* Facebook */
-}
-
-.social-icons li:nth-child(2) a:before {
-  background: #E1306C; /* Instagram */
-}
-
-.social-icons li:nth-child(3) a:before {
-  background: #25D366; /* WhatsApp */
-}
-
-.social-icons li:nth-child(4) a:before {
-  background: #FF0000; /* YouTube */
-}
-
-.social-icons li a:hover {
-  transform: translateY(-5px);
+  background-color: #fdfdfd;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Dark Mode */
-body.active {
-  background-color: #1e1c2a;
-  color: #fff;
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
 }
 
-body.active .navbar a,
-body.active .logo,
-body.active .icon {
-  color: #fff;
+/* Logo Section */
+.logo-container {
+  text-align: left;
+  padding: 1rem 2rem;
+}
+.brand-main {
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.brand-sub {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Header Banner with Waves */
+.wave-banner {
+  position: relative;
+  height: 250px;
+  background: linear-gradient(120deg, #76b852, #8DC26F);
+  overflow: hidden;
+  color: white;
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 100px;
+  background-repeat: repeat-x;
+  background-size: 50% 100px;
+}
+#wave1 {
+  background-image: url('https://svgshare.com/i/uSZ.svg');
+  animation: waveMove 8s linear infinite;
+  z-index: 1;
+}
+#wave2 {
+  background-image: url('https://svgshare.com/i/uSa.svg');
+  animation: waveMove 16s linear infinite reverse;
+  z-index: 0;
+}
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  background: #fff;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Login Button */
+.login-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Content Area */
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #76b852;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }

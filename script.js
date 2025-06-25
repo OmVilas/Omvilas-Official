@@ -50,3 +50,6 @@ ScrollReveal({
             .contact-box`, {
     interval: 200
 });
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
