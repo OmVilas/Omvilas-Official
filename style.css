@@ -234,3 +234,59 @@ body.active .logo,
 body.active .icon {
   color: #fff;
 }
+/* Contact Section Styles */
+.contact {
+    background-color: #fff8ec;
+    padding: 60px 0;
+    border-top: 2px solid #f7d774;
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.contact form .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 10px 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact form .form-control:focus {
+    border-color: #ffc107;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+.contact form button {
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #e0a800;
+    color: #fff;
+}
+
+.contact .bi {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    color: #f0ad4e;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
