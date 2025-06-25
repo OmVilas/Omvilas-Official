@@ -72,18 +72,7 @@ body.dark-mode {
   cursor: pointer;
 }
 
-/* Login Button */
-.login-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #fff;
-  color: #333;
-  text-decoration: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
+
 
 /* Content Area */
 .content {
