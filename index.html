@@ -18,11 +18,319 @@
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+
+  <style>
+    :root {
+      --primary: #E63946;
+      --secondary: #F1FAEE;
+      --accent: #A8DADC;
+      --dark: #1D3557;
+      --light: #F1FAEE;
+      --gold: #FFD166;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      background-color: var(--secondary);
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      color: var(--dark) !important;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .hero-section {
+      min-height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      z-index: 2;
+      max-width: 600px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      padding: 0.8rem 2rem;
+      font-weight: 500;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background-color: transparent;
+      border-color: white;
+      transform: translateY(-3px);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+      color: var(--dark);
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      bottom: -10px;
+      left: 25%;
+      background-color: var(--primary);
+    }
+    
+    .about-img {
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .about-img:hover {
+      transform: scale(1.03);
+    }
+    
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      height: 100%;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+    
+    .card-title {
+      color: var(--dark);
+      font-weight: 600;
+    }
+    
+    .price {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-dock {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+    
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-icons li {
+      margin-bottom: 15px;
+    }
+    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    }
+    
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 3rem 0;
+    }
+    
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    .footer-links h5 {
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-links h5:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      bottom: -8px;
+      left: 0;
+      background-color: var(--primary);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1rem;
+      }
+      
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .social-dock {
+        display: none;
+      }
+      
+      .footer-links {
+        margin-bottom: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -30,7 +338,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a href="#" class="logo">
-          <img src="images/logo.svg" alt="Om Vilas Logo">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjRTYzOTQ2IiBkPSJNMjU2IDhDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCA0NDhjLTExMC41IDAtMjAwLTg5LjUtMjAwLTIwMFMxNDUuNSA1NiAyNTYgNTZzMjAwIDg5LjUgMjAwIDIwMC04OS41IDIwMC0yMDAgMjAwem0xMDEuOC0yNjEuN0MtMzU0IDExMy4yIDMwNC41IDMyIDI1NiAzMmMtMTYuNSAwLTMzIDQtNDcgMTEuOC0yMy40IDEyLjgtNDAgMzYuNi00MCA2NC4yIDAgMzUuOSA0Mi4yIDY3LjYgOTYgNjcuNiAzMi4zIDAgNjMuOC0xMy4zIDg0LjctMzUuNSAxLjItMS40IDIuMS0yLjkgMi44LTQuNSAxLjgtMy4zLjYtNy41LTIuNy05LjMtMy4zLTEuOC03LjUtLjYtOS4zIDIuNy0uNS45LTEgMS44LTEuNSAyLjctMTYuNSAyMC4yLTQxLjEgMzIuNi02OC4yIDMyLjYtMzkuMSAwLTcyLTI0LjUtNzItNTYuMyAwLTE5LjggMTEuMi0zNy4zIDI4LjUtNDguNCAxOS4zLTEyLjIgNDMuNS0xOSA2OC4xLTE5czQ4LjkgNi44IDY4LjEgMTljMTcuMiAxMS4xIDI4LjUgMjguNiAyOC41IDQ4LjQgMCAxMS44LTQuNCAyMi41LTExLjkgMzAuN0wzMDcgMjQzYy0zLjEgMy4xLTMuMSA4LjIgMCAxMS4zIDMuMSAzLjEgOC4yIDMuMSAxMS4zIDBsNTkuNC01OS40YzI3LjktMzUuNCAyNC40LTg3LjItMTMuMS0xMTYuNXoiLz48L3N2Zz4=" alt="Om Vilas Logo">
           Om Vilas
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -66,7 +374,7 @@
       <h2 class="text-center section-title" data-aos="fade-up">Our Story</h2>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-          <img src="images/about.jpg" alt="About Om Vilas" class="img-fluid about-img">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Om Vilas" class="img-fluid about-img">
         </div>
         <div class="col-lg-6" data-aos="fade-left">
           <h3 class="mb-4">Traditional Taste, Modern Quality</h3>
@@ -89,7 +397,7 @@
         <!-- Product 1 -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card">
-            <img src="images/murukku.jpg" class="card-img-top" alt="Murukku">
+            <img src="https://images.unsplash.com/photo-1632818924360-68f7a5a9e531?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Murukku">
             <div class="card-body">
               <h5 class="card-title">Traditional Murukku</h5>
               <p class="card-text">Crunchy, spiral-shaped snack made from rice and urad dal flour, seasoned with cumin and sesame seeds.</p>
@@ -104,7 +412,7 @@
         <!-- Product 2 -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card">
-            <img src="images/palak-sev.jpg" class="card-img-top" alt="Palak Sev">
+            <img src="https://images.unsplash.com/photo-1601050690777-2c239da1f5f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Palak Sev">
             <div class="card-body">
               <h5 class="card-title">Palak Sev</h5>
               <p class="card-text">Crispy spinach-infused noodles with a perfect blend of spices, rich in iron and flavor.</p>
@@ -119,7 +427,7 @@
         <!-- Product 3 -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card">
-            <img src="images/garlic-mixture.jpg" class="card-img-top" alt="Garlic Mixture">
+            <img src="https://images.unsplash.com/photo-1601050690643-8a55b07f2038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Garlic Mixture">
             <div class="card-body">
               <h5 class="card-title">Garlic Mixture</h5>
               <p class="card-text">A tantalizing mix of fried lentils, peanuts, and spices with a bold garlic flavor that lingers.</p>
@@ -185,7 +493,7 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100">
             <div class="card-body text-center">
-              <img src="images/customer1.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
               <h5>Priya Sharma</h5>
               <div class="text-warning mb-3">
                 <i class="fas fa-star"></i>
@@ -203,7 +511,7 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100">
             <div class="card-body text-center">
-              <img src="images/customer2.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
               <h5>Raj Patel</h5>
               <div class="text-warning mb-3">
                 <i class="fas fa-star"></i>
@@ -221,7 +529,7 @@
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card h-100">
             <div class="card-body text-center">
-              <img src="images/customer3.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
               <h5>Ananya Gupta</h5>
               <div class="text-warning mb-3">
                 <i class="fas fa-star"></i>
@@ -259,7 +567,7 @@
         </div>
         
         <div class="col-lg-6" data-aos="fade-left">
-          <form id="contactForm">
+          <form>
             <div class="mb-3">
               <input type="text" class="form-control" placeholder="Your Name" required>
             </div>
@@ -375,6 +683,48 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <!-- Custom JS -->
-  <script src="js/script.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Back to top button
+    window.addEventListener('scroll', function() {
+      var backToTop = document.getElementById('backToTop');
+      if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.querySelector('header').classList.add('shrink');
+      } else {
+        document.querySelector('header').classList.remove('shrink');
+      }
+    });
+  </script>
 </body>
 </html>
