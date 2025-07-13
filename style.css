@@ -1,11 +1,11 @@
 :root {
-      --primary: #E63946;
-      --secondary: #F1FAEE;
-      --accent: #A8DADC;
-      --dark: #1D3557;
-      --light: #F1FAEE;
-      --gold: #FFD166;
-    }
+  --primary: #0288d1; /* Sky blue primary */
+  --secondary: #e0f7fa;
+  --accent: #4dd0e1;
+  --dark: #01579b;
+  --light: #f1f8ff;
+  --gold: #FFD166;
+}
     
     body {
       font-family: 'Poppins', sans-serif;
@@ -101,6 +101,7 @@
     .btn-primary:hover {
       background-color: transparent;
       border-color: white;
+      background-color: var(--accent);
       transform: translateY(-3px);
     }
     
@@ -306,3 +307,7 @@
         font-size: 1.8rem;
       }
     }
+
+    .text-warning {
+  font-size: 1.2rem;
+}
